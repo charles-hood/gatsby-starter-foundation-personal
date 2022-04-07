@@ -1,7 +1,7 @@
 ---
 template: about-page
 slug: /about
-title: About Foundation
+title: About Me
 ---
 
-This is the personal blog for Charles Hood. (Don't get your hopes up.)
+This is the personal blog for Charles Hood. (Don't get your hopes up for regular updates.)
