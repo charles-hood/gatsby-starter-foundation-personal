@@ -8,4 +8,4 @@ cta:
   ctaText: Know more
   ctaLink: /about
 ---
-I am a technologist and music fan who believes in promoting and supporting live, local music.
+I am a technologist and music fan who believes in promoting and supporting live, local music. Welcome to my blog.
