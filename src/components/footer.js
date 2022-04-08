@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
-import { RiHeart2Line } from "react-icons/ri"
 
 const Footer = () => (
   <footer
@@ -12,11 +11,7 @@ const Footer = () => (
   >
     <div className="container">
       <p>
-        Copyright &copy; 2022, Coded with{" "}
-        <span className="icon -love">
-          <RiHeart2Line />
-        </span>{" "}
-        by <Link to="/">RockOfPages.com</Link>
+        Copyright &copy; 2022 by <Link to="https://www.facebook.com/RockOfPagesDotCom/">RockOfPages.com</Link>
       </p>
     </div>
   </footer>
