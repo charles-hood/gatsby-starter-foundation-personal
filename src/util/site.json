@@ -4,8 +4,8 @@
     "titleTemplate": "%s",
     "description": "The personal web page of Charles Hood",
     "siteUrl": "https://www.charleshood.me",
-    "image": "/assets/stackrole.png",
-    "iconimage": "/assets/stackrole.png",
+    "image": "/assets/ch_international_vehicle_registration_oval.png",
+    "iconimage": "/assets/ch_international_vehicle_registration_oval.svg",
     "twitterUsername": "@charleshood"
   },
   "ga": "UA-XXXXXXXXX-X"
