@@ -8,5 +8,4 @@ cta:
   ctaText: Know more
   ctaLink: /about
 ---
-
-I am a systems engineer specializing in storage networking, based in Atlanta, Georgia. I believe the best music is not on your radio!
+I am a technologist and music fan living in Woodstock, Georgia. I believe in promoting and supporting live, local music. The best songs today aren't found on the radio!
