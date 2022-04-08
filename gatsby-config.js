@@ -102,7 +102,7 @@ module.exports = {
         short_name: `Charles Hood`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        theme_color: `#4682B4`,
         display: `standalone`,
         icon: "static" + settings.meta.iconimage,
       },
