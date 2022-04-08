@@ -17,12 +17,12 @@
       "url": "https://www.youtube.com/channel/UCHVkPHY94Dnj6XalBWxdTDw"
     },
     {
-      "icon": "github",
-      "url": "https://github.com/charles-hood"
-    },
-    {
       "icon": "telegram",
       "url": "https://t.me/charleshood"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/charleshood"
     }
   ]
 }
