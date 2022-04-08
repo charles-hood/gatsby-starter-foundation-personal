@@ -30,7 +30,7 @@ const SEO = ({ title, description, image, article }) => {
       <link rel="alternate" href={seo.url} hreflang="en-us" />
       <link rel="alternate" href={seo.url} hreflang="en" />
       <link rel="alternate" href={seo.url} hreflang="x-default" />
-      <meta name="theme-color" content="#378b2e" />
+      <meta name="theme-color" content="#4682B4" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta
