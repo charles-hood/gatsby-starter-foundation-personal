@@ -30,11 +30,13 @@ const SEO = ({ title, description, image, article }) => {
       <link rel="alternate" href={seo.url} hreflang="en-us" />
       <link rel="alternate" href={seo.url} hreflang="en" />
       <link rel="alternate" href={seo.url} hreflang="x-default" />
+      <meta name="theme-color" content="#4682B4" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
+        content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
       />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
