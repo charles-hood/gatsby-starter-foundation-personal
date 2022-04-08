@@ -19,6 +19,10 @@
     {
       "icon": "github",
       "url": "https://github.com/charles-hood"
+    },
+    {
+      "icon": "telegram",
+      "url": "https://t.me/charleshood"
     }
   ]
 }
