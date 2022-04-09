@@ -1,6 +1,6 @@
 ---
 template: contact-page
 slug: /contact
-title: Use this form to send me a message
+title: Send me a message
 ---
-(Or you can send a DM on Twitter: <https://twitter.com/charleshood>)
+(Or DM [@charleshood](https://twitter.com/charleshood) on Twitter)
