@@ -302,6 +302,21 @@ article img {
     margin: 0 auto;
   }
 }
+// page
+.page {
+  a:link {
+      text-decoration: underline;
+  }
+  a:visited {
+      text-decoration: underline;
+  }
+  a:hover {
+      text-decoration: underline 18%;
+  }
+  a:active {
+      text-decoration: underline;
+  }
+}
 // Contact page
 .contact-page {
   .wrapper {
