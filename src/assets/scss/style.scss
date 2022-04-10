@@ -294,7 +294,6 @@ article img {
 .page,
 .blog-page,
 .contact-page,
-.about-page,
 .thanks-page,
 .not-found-page {
   padding: 50px 20px;
@@ -311,21 +310,6 @@ article img {
   }
   .description {
     line-height: 1.5;
-  }
-}
-// About page
-.about-page {
-  a:link {
-    text-decoration: underline;
-  }
-  a:visited {
-    text-decoration: underline;
-  }
-  a:hover {
-    text-decoration: underline 18%;
-  }
-  a:active {
-    text-decoration: underline;
   }
 }
 .contact-form {
