@@ -304,6 +304,23 @@ article img {
 }
 // Contact page
 .contact-page {
+  a:link {
+  text-decoration: underline;
+  }
+a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline steelblue 18%;
+}
+a:active {
+  text-decoration: underline steelblue;
+}
+
+}
+// About page
+.about-page {
   .wrapper {
     max-width: 768px;
     margin: 0 auto;
