@@ -114,10 +114,7 @@ export default class Search extends Component {
 const searchStyle = {
   searchResults: {
     borderRadius: "0 0 6px 6px",
-    color: "fff",
-    bg: "#111",
-    listStyle: "none",
-    textAlign: "left",
+    display: "none",
   },
   searchField: {
     zIndex: "11111",
@@ -135,7 +132,7 @@ const searchStyle = {
     ".search-container": {
       display: "none",
       position: "absolute",
-      top: ["67px", "43px", "43px", "48px"],
+      top: ["85px", "55px", "55px", "60px"],
       borderRadius: "12px",
       width: ["100%", "auto"],
       zIndex: "1111",
@@ -145,8 +142,8 @@ const searchStyle = {
         "0px 0px 50px 0px rgba(0,0,0,.1), 0px 0px 1px 1px rgba(0,0,0,.1)",
     },
     ".search-input": {
-      bg: "#222",
-      color: "#fff",
+      bg: "#fff",
+      color: "#000",
       borderRadius: "0",
       boxShadow: "none",
       border: "none",
@@ -195,9 +192,9 @@ const searchStyle = {
           },
           ul: {
             display: "block",
-            bg: "#111",
-            pl: '10px',
-            m: '6px',
+            bg: "#fff",
+            pl: 0,
+            m: 0,
           },
           "ul > li": {
             listStyle: "none",
@@ -205,7 +202,7 @@ const searchStyle = {
           },
           "ul > li > a": {
             display: "block",
-            color: "#777",
+            color: "#000",
             p: 3,
             "&:hover": {
               color: "#9b9b9b",
