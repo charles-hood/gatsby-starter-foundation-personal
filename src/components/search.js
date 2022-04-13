@@ -3,12 +3,20 @@ import { jsx } from "theme-ui"
 import { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-import { RiSearchLine } from "react-icons/ri"
+import { RiSearchLine } from "@react-icons/all-files/ri/RiSearchLine"
+
+const SearchListLink = props => (
+  <li>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
+)
 
 export default class Search extends Component {
   constructor(props) {
     super(props)
     this.state = { showSearch: false }
+    this.state = props.to
+    this.state = props.children
     this.handleToggleClick = this.handleToggleClick.bind(this)
     this.state = {
       query: ``,
@@ -23,17 +31,42 @@ export default class Search extends Component {
   }
 
   render() {
+    const blogPosts = this.state.results
+    const listSearchItems = blogPosts.map((blogPosts, index) => (
+      <div>
+        <SearchListLink key={index} to={blogPosts.path}>
+          <div>{blogPosts.title}</div>
+          <div
+            sx={{
+              color: "#777",
+              margin: "10px",
+            }}
+          >
+            {blogPosts.date}
+          </div>
+        </SearchListLink>
+          <div
+            className="excerpt"
+            sx={{
+              color: "#fff",
+              textAlign: "left",
+              margin: "10px",
+            }}
+          >
+            {blogPosts.description}
+          </div> 
+      </div>
+    ))
     return (
       <div sx={searchStyle.searchField}>
         <div>
           <button
-            aria-label="search"
             onClick={this.handleToggleClick}
             className={this.state.showSearch ? "search is-active" : "search"}
           >
             <RiSearchLine />
           </button>
-          <div sx={searchStyle.search} className="search-container">
+          <div sx={searchStyle.search} className="search-container" itemScope='itemScope' itemType='https://schema.org/SearchAction'>
             <input
               type="text"
               placeholder="Search"
@@ -41,17 +74,22 @@ export default class Search extends Component {
               onChange={this.search}
               className="search-input"
             />
-            <ul sx={searchStyle.searchResults}>
-              {this.state.results.map(page => (
-                <li key={page.id}>
-                  {page.template === "blog-post" ? (
-                    <Link to={page.slug}>{page.title}</Link>
-                  ) : (
-                    ""
-                  )}
-                </li>
-              ))}
-            </ul>
+            <nav className='nav-scroll'
+              sx={{
+                background: "#111",
+              }}
+            >
+              <div
+                sx={{
+                  maxHeight: "70vh",
+                  background: "#111",
+                }}
+              >
+                <ul sx={searchStyle.searchResults} itemScope='itemScope' itemType='https://schema.org/SearchResults'>
+                  {listSearchItems}
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
@@ -76,7 +114,10 @@ export default class Search extends Component {
 const searchStyle = {
   searchResults: {
     borderRadius: "0 0 6px 6px",
-    display: "none",
+    color: "fff",
+    bg: "#111",
+    listStyle: "none",
+    textAlign: "left",
   },
   searchField: {
     zIndex: "11111",
@@ -94,7 +135,7 @@ const searchStyle = {
     ".search-container": {
       display: "none",
       position: "absolute",
-      top: ["85px", "55px", "55px", "60px"],
+      top: ["67px", "43px", "43px", "48px"],
       borderRadius: "12px",
       width: ["100%", "auto"],
       zIndex: "1111",
@@ -104,8 +145,8 @@ const searchStyle = {
         "0px 0px 50px 0px rgba(0,0,0,.1), 0px 0px 1px 1px rgba(0,0,0,.1)",
     },
     ".search-input": {
-      bg: "#fff",
-      color: "#000",
+      bg: "#222",
+      color: "#fff",
       borderRadius: "0",
       boxShadow: "none",
       border: "none",
@@ -154,9 +195,9 @@ const searchStyle = {
           },
           ul: {
             display: "block",
-            bg: "#fff",
-            pl: 0,
-            m: 0,
+            bg: "#111",
+            pl: '10px',
+            m: '6px',
           },
           "ul > li": {
             listStyle: "none",
@@ -164,7 +205,7 @@ const searchStyle = {
           },
           "ul > li > a": {
             display: "block",
-            color: "#000",
+            color: "#777",
             p: 3,
             "&:hover": {
               color: "#9b9b9b",
