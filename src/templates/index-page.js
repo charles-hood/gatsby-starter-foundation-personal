@@ -74,16 +74,16 @@ const HomePage = ({ data }) => {
     return (
       <div key={"social icons" + index}>
         {icons.icon === "facebook" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Facebook">
+          <a href={icons.url} target="_blank" aria-label="link to Facebook">
             <SiFacebook alt="Facebook icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "twitter" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Twitter">
+          <a href={icons.url} target="_blank" aria-label="link to Twitter">
             <SiTwitter alt="Twitter icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
@@ -95,44 +95,44 @@ const HomePage = ({ data }) => {
           ""
         )}
         {icons.icon === "linkedin" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Linkedin">
+          <a href={icons.url} target="_blank" aria-label="link to Linkedin">
             <SiLinkedin alt="Linkedin icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "youtube" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Youtube">
+          <a href={icons.url} target="_blank" aria-label="link to Youtube">
             <SiYoutube alt="Youtube icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "instagram" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Instagram">
+          <a href={icons.url} target="_blank" aria-label="link to Instagram">
             <SiInstagram alt="Instagram icon" />
-          </Link>
+          </La>
         ) : (
           ""
         )}
         {icons.icon === "github" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Github" >
+          <a href={icons.url} target="_blank" aria-label="link to Github" >
             <SiGithub alt="Github icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "telegram" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Telegram" >
+          <a href={icons.url} target="_blank" aria-label="link to Telegram" >
             <SiTelegram alt="Telegram icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "wordpress" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Wordpress">
+          <a href={icons.url} target="_blank" aria-label="link to Wordpress">
             <FaWordpress alt="Wordpress icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
