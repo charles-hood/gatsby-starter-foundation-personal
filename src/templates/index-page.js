@@ -111,7 +111,7 @@ const HomePage = ({ data }) => {
         {icons.icon === "instagram" ? (
           <a href={icons.url} target="_blank" aria-label="link to Instagram">
             <SiInstagram alt="Instagram icon" />
-          </La>
+          </a>
         ) : (
           ""
         )}
