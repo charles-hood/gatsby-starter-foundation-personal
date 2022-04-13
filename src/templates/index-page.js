@@ -20,7 +20,7 @@ import {
   RiBehanceFill,
 } from "react-icons/ri"
 import { FaWordpress, FaVk} from "react-icons/fa"
-import { IoLogoTiktok } from "react-icons/io5"
+import { SiTiktok } from "react-icons/si"
 
 import Layout from "../components/layout"
 import BlogListHome from "../components/blog-list-home"
@@ -96,7 +96,7 @@ const HomePage = ({ data }) => {
         )}
         {icons.icon === "tiktok" ? (
           <Link to={icons.url} target="_blank" aria-label="link to TikTok">
-            <IoLogoTiktok alt="TikTok icon"/>
+            <SiTiktok alt="TikTok icon"/>
           </Link>
         ) : (
           ""
