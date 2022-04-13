@@ -88,9 +88,9 @@ const HomePage = ({ data }) => {
           ""
         )}
         {icons.icon === "tiktok" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to TikTok">
+          <a href="{icons.url}" target="_blank" aria-label="link to TikTok">
             <SiTiktok alt="TikTok icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
