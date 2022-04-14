@@ -48,24 +48,6 @@ module.exports = {
               loading: "lazy",
             },
           },
-          {
-            resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
-            options: {
-              // Fields to index
-              fields: [`title`, `template`, `slug`],
-              // How to resolve each field`s value for a supported node type
-              resolvers: {
-                // For any node of type MarkdownRemark, list how to resolve the fields` values
-                MarkdownRemark: {
-                  template: node => node.frontmatter.template,
-                  title: node => node.frontmatter.title,
-                  slug: node => node.frontmatter.slug,
-                },
-              },
-              // Optional filter to limit indexed nodes
-              filter: (node, getNode) => node.frontmatter.tags !== "exempt",
-            },
-          },
           `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-prismjs`,
@@ -84,6 +66,31 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `description`, `content`, `path`, `date`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          BlogPost : {
+            title         : node => node.title,
+            description   : node => node.description,
+            content       : node => node.rawMarkdownBody,
+            path          : node => node.slug,
+            date          : node => node.date,
+            featuredImage : (node, getNode) => getNode(node.featuredImage___NODE)
+          },
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            description: node => node.frontmatter.description,
+            content: node => node.rawMarkdownBody,
+            path: node => node.frontmatter.path,
+            date: node => node.frontmatter.date
+          },
+        },
+      },
+    },    
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",
